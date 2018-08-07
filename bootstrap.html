@@ -1057,10 +1057,30 @@ body .markdown-body
 .codehilite .gc{color:#999;background-color:#EAF2F5}
 </style><title>bootstrap</title></head><body><article class="markdown-body"><h1 id="from-bootstrap-v3-to-v4">From Bootstrap v3 to v4<a class="headerlink" href="#from-bootstrap-v3-to-v4" title="Permanent link"></a></h1>
 <p>The newest version of Bootstrap has brought a lot of awesome new stuff, but when you&rsquo;re used to the version 3 of bootstrap using the new one can be a little disorienting. This article aims to show you all the important changes that took place between these two versions so you can start using the version 4 on all your projects without fear!</p>
-<h2 id="global-changes">Global changes<a class="headerlink" href="#global-changes" title="Permanent link"></a></h2>
-<p>The base font-size increased from 14px to 16px.</p>
-<p>The primary CSS unit used is now <code>rem</code> (used to be <code>px</code>), The <code>rem</code> unit sets the size relative to the base font-size (if base font-size is <code>16px</code>, <code>2rem</code> would be <code>32px</code>). Although pixels are still used for media queries and grid behavior as device viewports are not affected by type size.</p>
-<p>The Grid now uses flexbox by default with some vertical and horizontal alignment classes.</p>
+<h2 id="whats-new">What&rsquo;s new ?<a class="headerlink" href="#whats-new" title="Permanent link"></a></h2>
+<ol>
+<li>
+<p><strong>The default font-size increased from 14px to 16px.</strong></p>
+</li>
+<li>
+<p><strong>The primary CSS unit used is now <code>rem</code> (used to be <code>px</code>).</strong>
+    The <code>rem</code> unit sets the size relative to the base font-size (if base font-size is <code>16px</code>, <code>2rem</code> would be <code>32px</code>). Although pixels are still used for media queries and grid behavior as device viewports are not affected by type size.</p>
+</li>
+<li>
+<p><strong>The Grid now uses flexbox by default with some vertical and horizontal alignment classes.</strong></p>
+</li>
+<li>
+<p><strong>New breakpoint for responsive grid.</strong>
+    <div class="codehilite"><pre><span class="na">$grid-breakpoints</span><span class="o">:</span> <span class="p">(</span>
+    <span class="na">xs</span><span class="o">:</span> <span class="mi">0</span><span class="kt">px</span><span class="o">,</span>
+    <span class="na">sm</span><span class="o">:</span> <span class="mi">576</span><span class="kt">px</span><span class="o">,</span>
+    <span class="na">md</span><span class="o">:</span> <span class="mi">768</span><span class="kt">px</span><span class="o">,</span>
+    <span class="na">lg</span><span class="o">:</span> <span class="mi">992</span><span class="kt">px</span><span class="o">,</span>
+    <span class="na">xl</span><span class="o">:</span> <span class="mi">1200</span><span class="kt">px</span>
+<span class="o">);</span>
+</pre></div></p>
+</li>
+</ol>
 <h2 id="utility-classes">Utility classes<a class="headerlink" href="#utility-classes" title="Permanent link"></a></h2>
 <h3 id="borders">Borders<a class="headerlink" href="#borders" title="Permanent link"></a></h3>
 <p>Want to add borders to you elements ? You can now use the new <code>border</code> utility classes like this:</p>
@@ -1101,11 +1121,10 @@ body .markdown-body
   <li><code>inline-block</code></li>
   <li><code>block</code></li>
   <li><code>flex</code></li>
-  <li>...</li>
 </ul>
 
 <p>Example: How to display a certain <code>div</code> on phone &amp; tablet and display another one on larger screens?</p>
-<div class="codehilite"><pre><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;d-sm-none&quot;</span><span class="p">&gt;</span>Display this on screens small than sm (phone <span class="ni">&amp;amp;</span> tablet)<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<div class="codehilite"><pre><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;d-sm-none&quot;</span><span class="p">&gt;</span>Display this on screens small than sm (phone and§ tablet)<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;d-none d-sm-block&quot;</span><span class="p">&gt;</span>Display this on screens larger than sm<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </pre></div>
 
@@ -1187,4 +1206,24 @@ body .markdown-body
   <li><code>x</code> for right &amp; left</li>
   <li><code>y</code> for top &amp; bottom</li>
 </ul></p>
+<p>Sizes can be:</p>
+<ul>
+  <li><code>0</code> for setting margin or padding to <code>0</code></li>
+  <li><code>1</code> for setting margin or padding to <code>0.25rem</code></li>
+  <li><code>2</code> for setting margin or padding to <code>0.5rem</code></li>
+  <li><code>3</code> for setting margin or padding to <code>1rem</code></li>
+  <li><code>4</code> for setting margin or padding to <code>1.5rem</code></li>
+  <li><code>5</code> for setting margin or padding to <code>3rem</code></li>
+  <li><code>auto</code> for setting margin or padding <code>auto</code></li>
+</ul>
+
+<h3 id="text">Text<a class="headerlink" href="#text" title="Permanent link"></a></h3>
+<p>Text alignement classes haven&rsquo;t changed much but the cool thing is that you can now change the alignement on different devices!</p>
+<div class="codehilite"><pre><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-left&quot;</span><span class="p">&gt;</span>Left aligned text.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-center&quot;</span><span class="p">&gt;</span>Center aligned text.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-right&quot;</span><span class="p">&gt;</span>Right aligned text.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-left text-md-center&quot;</span><span class="p">&gt;</span>Left aligned text small devices (xs, sm), but centered on wider ones.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+
 <h2 id="the-grid">The Grid<a class="headerlink" href="#the-grid" title="Permanent link"></a></h2></article></body></html>

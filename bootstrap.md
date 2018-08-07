@@ -2,14 +2,25 @@
 
 The newest version of Bootstrap has brought a lot of awesome new stuff, but when you're used to the version 3 of bootstrap using the new one can be a little disorienting. This article aims to show you all the important changes that took place between these two versions so you can start using the version 4 on all your projects without fear!
 
-## Global changes
+## What's new ?
 
-The base font-size increased from 14px to 16px.
+1. **The default font-size increased from 14px to 16px.**
 
-The primary CSS unit used is now `rem` (used to be `px`), The `rem` unit sets the size relative to the base font-size (if base font-size is `16px`, `2rem` would be `32px`). Although pixels are still used for media queries and grid behavior as device viewports are not affected by type size.
+2. **The primary CSS unit used is now `rem` (used to be `px`).**
+    The `rem` unit sets the size relative to the base font-size (if base font-size is `16px`, `2rem` would be `32px`). Although pixels are still used for media queries and grid behavior as device viewports are not affected by type size.
 
-The Grid now uses flexbox by default with some vertical and horizontal alignment classes.
+3. **The Grid now uses flexbox by default with some vertical and horizontal alignment classes.**
 
+4. **New breakpoint for responsive grid.**
+    ```sass
+    $grid-breakpoints: (
+        xs: 0px,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px
+    );
+    ```
 ## Utility classes
 
 ### Borders
@@ -68,7 +79,6 @@ Other common types of display can be used in the same syntax:
   <li><code>inline-block</code></li>
   <li><code>block</code></li>
   <li><code>flex</code></li>
-  <li>...</li>
 </ul>
 
 
@@ -182,15 +192,25 @@ Sides can be:
 Sizes can be:
 
 <ul>
-  <li><code>0</code> for setting margin or padding to `0`</li>
-  <li><code>1</code> for setting margin or padding to `1rem * .25`</li>
-  <li><code>2</code> for setting margin or padding to `1rem * .5`</li>
-  <li><code>3</code> for setting margin or padding to `1rem`</li>
-  <li><code>4</code> for setting margin or padding to `1rem * 1.5`</li>
-  <li><code>5</code> for setting margin or padding to `1rem * 3`</li>
-  <li><code>auto</code> for setting margin or padding `auto`</li>
+  <li><code>0</code> for setting margin or padding to <code>0</code></li>
+  <li><code>1</code> for setting margin or padding to <code>0.25rem</code></li>
+  <li><code>2</code> for setting margin or padding to <code>0.5rem</code></li>
+  <li><code>3</code> for setting margin or padding to <code>1rem</code></li>
+  <li><code>4</code> for setting margin or padding to <code>1.5rem</code></li>
+  <li><code>5</code> for setting margin or padding to <code>3rem</code></li>
+  <li><code>auto</code> for setting margin or padding <code>auto</code></li>
 </ul>
 
 ### Text
+
+Text alignement classes haven't changed much but the cool thing is that you can now change the alignement on different devices!
+
+```html
+<p class="text-left">Left aligned text.</p>
+<p class="text-center">Center aligned text.</p>
+<p class="text-right">Right aligned text.</p>
+
+<p class="text-left text-md-center">Left aligned text small devices (xs, sm), but centered on wider ones.</p>
+```
 
 ## The Grid
