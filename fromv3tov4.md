@@ -117,10 +117,10 @@ Here's how the new version works:
 
 <ul>
   <li><code>col-</code> for extra small device (smaller than 576px)</li>
-  <li><code>col-sm</code> for small device (bigger than 576px)</li>
-  <li><code>col-md</code> for medium device (smaller than 768px)</li>
-  <li><code>col-lg</code> for large device (smaller than 992px)</li>
-  <li><code>col-xl</code> for extra large device (smaller than 1200px)</li>
+  <li><code>col-sm</code> for small device (greater than 576px)</li>
+  <li><code>col-md</code> for medium device (greater than 768px)</li>
+  <li><code>col-lg</code> for large device (greater than 992px)</li>
+  <li><code>col-xl</code> for extra large device (greater than 1200px)</li>
 </ul>
 
 ### Equal width columns
