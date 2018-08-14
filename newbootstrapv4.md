@@ -1,6 +1,6 @@
-# From Bootstrap v3 to v4
+# Bootstrap v4, what's new?
 
-The newest version of Bootstrap has brought a lot of awesome new stuff, but when you're used to the version 3 of bootstrap using the new one can be a little disorienting. This article aims to show you all the important changes that took place between these two versions so you can start using the version 4 on all your projects without fear!
+INTRO
 
 ## What's new ?
 
@@ -214,3 +214,94 @@ Text alignement classes haven't changed much but the cool thing is that you can 
 ```
 
 ## The Grid
+
+The grid is the ultimate weapon to make your websites responsive with very little setup, the newest version of Bootstrap comes with a highly improved grid system, including the fact that `.row`s are now `flexbox`es by default!
+
+### Basics
+
+Lets take this simple example, we would like `col`umns to take all the screen width of a small device but take 1/3 of the screen on larger devices.
+
+<img src="images/row.png" alt="Bootstrap grid basics" width="100%">
+
+
+```html
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-4">
+      ...
+    </div>
+    <div class="col-12 col-md-4">
+      ...
+    </div>
+    <div class="col-12 col-md-4">
+      ...
+    </div>
+  </div>
+</div>
+```
+
+The new grid system now comes with 5 different breakpoints:
+
+<ul>
+  <li><code>col-</code> for extra small device (smaller than 576px)</li>
+  <li><code>col-sm</code> for small device (bigger than 576px)</li>
+  <li><code>col-md</code> for medium device (smaller than 768px)</li>
+  <li><code>col-lg</code> for large device (smaller than 992px)</li>
+  <li><code>col-xl</code> for extra large device (smaller than 1200px)</li>
+</ul>
+
+### Equal width columns
+
+<img src="images/equal-col.png" alt="Bootstrap grid equal width columns" width="100%">
+
+When doing equal width column you can now do the following:
+
+```html
+<div class="container">
+  <div class="row">
+    <div class="col">
+      1 of 2
+    </div>
+    <div class="col">
+      2 of 2
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      1 of 3
+    </div>
+    <div class="col">
+      2 of 3
+    </div>
+    <div class="col">
+      3 of 3
+    </div>
+  </div>
+</div>
+```
+
+### Aligning columns
+
+The grid now uses `flexbox`, this means that if you want to align it you can use the newest `flexbox` utility classes on a `.row`.
+
+<img src="images/centered-col.png" alt="Bootstrap grid aligning columns" width="100%">
+
+1. Using offset
+
+  ```html
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 offset-md-4">...</div>
+    </div>
+  </div>
+  ```
+
+2. Using flexbox
+
+  ```html
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-4">...</div>
+    </div>
+  </div>
+  ```
