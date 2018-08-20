@@ -1,6 +1,6 @@
 # From Bootstrap v3 to v4
 
-The new version of Bootstrap (4.0) has brought a lot of awesome new things, like an improved grid system for perfect responsiveness with 5 breakpoints (xs, sm, md, lg, xl), a flexbox system for complex layouts, many new utility classes that allow you to build you the design of you project in no time and much more!
+The new version of Bootstrap (4.0) has brought a lot of awesome new things, like an improved grid system for perfect responsiveness with 5 breakpoints (xs, sm, md, lg, xl), a flexbox system for complex layouts, many new utility classes that allow you to build the design of your project in no time and much more!
 
 If you are used to previous version of Bootstrap (3.3 or lower) it can be a little disorienting to migrate to the newest version with all these changes. This articles aims to show you how to use the Bootstrap version 4.0 if you are used to 3.3 or lower.
 
@@ -221,7 +221,7 @@ Bootstrap v4:
 
 ## Making an inline form
 
-The `.form-inline` has been dropped in the newest version, instead you can now use `.form-row`, a variation of our standard grid row. This means that first of all you can easily make complex form layout using your knowledge of the grid, but you can also easily modify the width that `input`s take using different size colums!
+There is now two different ways to achieve that. First there's with the good old `.form-inline` that already existed in previous versions. The new way would be to use use `.form-row`, a variation of our standard grid row. This means that first of all you can easily make complex form layout using your knowledge of the grid, but you can also easily modify the width that `input`s take using different size colums!
 
 <img src="images/form-inline.png" alt="Bootstrap grid aligning columns" width="100%">
 
@@ -240,6 +240,22 @@ Bootstrap v3:
 ```
 
 Bootstrap v4:
+
+using `.form-inline`:
+
+```html
+<form action="..." class="form-inline">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Arthur Littmann">
+  </div>
+  <div class="form-group">
+    <input type="email" class="form-control" placeholder="arthur@lewagon.com">
+  </div>
+  <button type="submit" class="btn btn-primary">Send invitation</button>
+</form>
+```
+
+or using `.form-row`:
 
 ```html
 <form action="...">
