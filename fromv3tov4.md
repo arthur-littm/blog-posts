@@ -289,4 +289,4 @@ Again `forms` classes of Bootstrap 4.1 offer many more possibilies, find out eve
 
 ## Conclusion
 
-As you can see Bootstrap v4 was a complete upgrade of the famous CSS/JS library and it came with notable changes, read more about the migration to v4 [on this Bootstrap guide](http://getbootstrap.com/docs/4.1/migration/).
+As you can see Bootstrap v4 was a complete upgrade of the famous CSS/JS library and it came with notable changes, read more about the migration to v4 [on this Bootstrap guide](http://getbootstrap.com/docs/4.1/migration/) or have a look at our other article about [What's new with Bootstrap v4](#).

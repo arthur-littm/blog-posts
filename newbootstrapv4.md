@@ -1,6 +1,6 @@
 # Bootstrap v4, what's new?
 
-INTRO
+The new version of Bootstrap (4.1) is here and this article gives you glimpse at what's new.
 
 ## What's new ?
 
@@ -39,37 +39,18 @@ Want to add borders to you elements ? You can now use the new `border` utility c
 
 ```
 
-### Border radius
-
 If you want to make your element a circle (like an avatar), you can now use `rounded-circle`.
 
-Bootstrap v3:
-
-```html
-<img src="..." alt="..." class="img-circle">
-```
-
-Bootstrap v4:
 ```html
 <img src="..." alt="..." class="rounded-circle">
 ```
 
 ### Display
 
-The display utility classes have changed a lot in the new version. To hide elements you can now use `d-none` (when no screen size it's `xs` by default) or `d-{screen-size}-none`
-
-Bootstrap v3:
+The display utility comes with classes. To hide elements you can now use `d-none` (when no screen size it's `xs` by default) or `d-{screen-size}-none`.
 
 ```html
-<div class="hidden-xs"></div>
-<div class="hidden-lg"></div>
-```
-
-Bootstrap v4:
-
-```html
-<div class="d-none"></div>
-<div class="d-lg-none"></div>
+<div class="d-none d-sm-block"></div>
 ```
 
 Other common types of display can be used in the same syntax:
@@ -82,11 +63,10 @@ Other common types of display can be used in the same syntax:
 </ul>
 
 
-
 Example: How to display a certain `div` on phone &amp; tablet and display another one on larger screens?
 
 ```html
-<div class="d-sm-none">Display this on screens small than sm (phone and§ tablet)</div>
+<div class="d-block d-sm-none">Display this on screens small than sm (phone and tablet)</div>
 <div class="d-none d-sm-block">Display this on screens larger than sm</div>
 ```
 
@@ -201,7 +181,7 @@ Sizes can be:
   <li><code>auto</code> for setting margin or padding <code>auto</code></li>
 </ul>
 
-### Text
+## Text
 
 Text alignement classes haven't changed much but the cool thing is that you can now change the alignement on different devices!
 
@@ -305,3 +285,25 @@ The grid now uses `flexbox`, this means that if you want to align it you can use
     </div>
   </div>
   ```
+
+## Forms
+
+Making nice form layouts is usually quite tricky, but now the `.form-row` class allows to use your rows and columns knowledge inside forms directly.
+
+<img src="images/form-inline.png" alt="Bootstrap grid aligning columns" width="100%">
+
+```html
+<form action="...">
+  <div class="form-row">
+    <div class="col-5 form-group">
+      <input type="text" class="form-control" placeholder="Arthur Littmann">
+    </div>
+    <div class="col-5 form-group">
+      <input type="email" class="form-control" placeholder="arthur@lewagon.com">
+    </div>
+    <div class="col-2 form-group">
+      <button type="submit" class="btn btn-primary">Send invitation</button>
+    </div>
+  </div>
+</form>
+```
